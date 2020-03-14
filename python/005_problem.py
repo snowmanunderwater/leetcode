@@ -14,6 +14,7 @@ Input: "cbbd"
 Output: "bb"
 """
 
+
 def longestPalindrome(s):
     res = ""
     for i in range(len(s)):

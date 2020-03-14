@@ -1,6 +1,5 @@
 # 6. ZigZag Conversion
 # https://leetcode.com/problems/zigzag-conversion/
-
 """The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
 
 P   A   H   N
@@ -29,7 +28,7 @@ P     I
 
 
 def convert(s: str, numRows: int) -> str:
-    answer = [""]*numRows
+    answer = [""] * numRows
     asc = True
     n = 0
 
@@ -37,13 +36,13 @@ def convert(s: str, numRows: int) -> str:
         if n >= len(s):
             break
 
-        for i in range(numRows) if asc else range(numRows-2, 0, -1):
+        for i in range(numRows) if asc else range(numRows - 2, 0, -1):
             answer[i] = answer[i] + s[n]
             n += 1
             if n >= len(s):
                 break
 
-        asc = not(asc)
+        asc = not (asc)
 
     return ''.join(answer)
 

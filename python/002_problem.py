@@ -1,10 +1,12 @@
 # Add Two numbers
 # https://leetcode.com/problems/add-two-numbers/
 
+
 class ListNode:
     def __init__(self, x):
         self.val = x
         self.next = None
+
     def __repr__(self):
         return f"{self.val}->{self.next}"
 

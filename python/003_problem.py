@@ -1,6 +1,5 @@
 # 3. Longest Substring Without Repeating Character
 # https://leetcode.com/problems/longest-substring-without-repeating-characters/
-
 """Given a string, find the length of the longest substring without repeating characters.
 
 Example 1:
@@ -23,6 +22,7 @@ Explanation: The answer is "wke", with the length of 3.
              Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
 """
 
+
 def lengthOfLongestSubstring(s: str) -> int:
     stack = []
     current = []
@@ -32,7 +32,7 @@ def lengthOfLongestSubstring(s: str) -> int:
             current.append(character)
         else:
             stack.append(current.copy())
-            current = list(current[current.index(character)+1:])
+            current = list(current[current.index(character) + 1:])
             current.append(character)
 
     stack.append(current)

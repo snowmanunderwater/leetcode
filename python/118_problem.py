@@ -1,6 +1,5 @@
 # 118. Pascal's Triangle
 # https://leetcode.com/problems/pascals-triangle/
-
 """Given a non-negative integer numRows, generate the first numRows of Pascal's triangle.
 In Pascal's triangle, each number is the sum of the two numbers directly above it.
 
@@ -33,15 +32,15 @@ def generate(numRows):
         temp.append(1)
 
         if i > 1:
-            for r in range(i-1):
-                temp.insert(i, answer[-1][r] + answer[-1][r+1])
+            for r in range(i - 1):
+                temp.insert(i, answer[-1][r] + answer[-1][r + 1])
 
         temp.append(1)
         answer.append(temp.copy())
         temp.clear()
-    
+
     return answer
 
 
-assert generate(5) == [[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]
+assert generate(5) == [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
 assert generate(0) == []

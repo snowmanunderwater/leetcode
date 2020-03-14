@@ -1,6 +1,5 @@
 # 461. Hamming Distance
 # https://leetcode.com/problems/hamming-distance/
-
 """The Hamming distance between two integers is the number of positions at which the corresponding bits are different.
 Given two integers x and y, calculate the Hamming distance.
 
@@ -29,15 +28,15 @@ def hammingDistance(x: int, y: int) -> int:
 
     new_x = "{0:b}".format(x)
     new_y = "{0:b}".format(y)
-    
+
     length = len(max(new_x, new_y, key=lambda x: len(x)))
-    
+
     new_x = new_x.zfill(length)
     new_y = new_y.zfill(length)
 
     for i in range(length):
         raznica += abs(int(new_x[i]) - int(new_y[i]))
-    
+
     return raznica
 
 

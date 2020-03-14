@@ -1,23 +1,24 @@
 # https://leetcode.com/problems/valid-parentheses/
 
+
 def check_brackets(stroka):
-	acc = []
+    acc = []
 
-	for char in stroka:
-		if char in ')]}' and len(acc) == 0:
-			return False
-		if char in '({[':
-			acc.append(char)
-		elif char in ')]}' and len(acc) > 0:
-			if char == ')' and acc[-1] != '(':
-				return False
-			elif char == ']' and acc[-1] != '[':
-				return False
-			elif char == '}' and acc[-1] != '{':
-				return False
-			acc.pop()
+    for char in stroka:
+        if char in ')]}' and len(acc) == 0:
+            return False
+        if char in '({[':
+            acc.append(char)
+        elif char in ')]}' and len(acc) > 0:
+            if char == ')' and acc[-1] != '(':
+                return False
+            elif char == ']' and acc[-1] != '[':
+                return False
+            elif char == '}' and acc[-1] != '{':
+                return False
+            acc.pop()
 
-	return False if acc else True
+    return False if acc else True
 
 
 assert check_brackets(')(') == False

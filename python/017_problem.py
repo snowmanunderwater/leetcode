@@ -23,4 +23,6 @@ def letterCombinations(digits):
     return list(map(''.join, itertools.product(*args)))
 
 
-assert letterCombinations('23') == ["ad","ae","af","bd","be","bf","cd","ce","cf"]
+assert letterCombinations('23') == [
+    "ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"
+]

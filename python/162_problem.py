@@ -1,6 +1,5 @@
 # 162. Find Peak Element
 # https://leetcode.com/problems/find-peak-element/
-
 """A peak element is an element that is greater than its neighbors.
 Given an input array nums, where nums[i] ≠ nums[i+1], find a peak element and return its index.
 The array may contain multiple peaks, in that case return the index to any one of the peaks is fine.
@@ -34,12 +33,12 @@ def findPeakElement(nums):
         return 0
     if length == 2:
         return nums.index(max(nums))
-    for n in range(1, length-1):
-        if nums[n-1] < nums[n] > nums[n+1]:
+    for n in range(1, length - 1):
+        if nums[n - 1] < nums[n] > nums[n + 1]:
             return n
-        
+
     return nums.index(max(nums))
 
 
-assert findPeakElement([1,2,3,1]) == 2
-assert findPeakElement([1,2,1,3,5,6,4]) == 1 or 5
+assert findPeakElement([1, 2, 3, 1]) == 2
+assert findPeakElement([1, 2, 1, 3, 5, 6, 4]) == 1 or 5

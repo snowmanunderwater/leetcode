@@ -14,21 +14,6 @@ Input: "cbbd"
 Output: "bb"
 """
 
-# def longestPalindrome(s: str) -> str:
-#     if not s:
-#         return ""
-#     if len(s) == 1:
-#         return s
-#     ans = []
-#     for i, character in enumerate(s):
-#         for sub in range(i+1, len(s)+1):
-#             if s[i:sub] == s[i:sub][::-1]:
-#                 ans.append(s[i:sub])
-#     if not ans:
-#     	return ""
-#     return max(ans, key=lambda x: len(x))
-
-
 def longestPalindrome(s):
     res = ""
     for i in range(len(s)):
